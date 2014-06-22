@@ -1,0 +1,103 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	<title>Bootstrap 3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="css/styles.css" rel="stylesheet"/>
+    
+         
+	<script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+</head>
+<body id="body" ng-controller="MainController">
+	<!-- Begin Nav -->
+	<div class="navbar navbar-inverse navbar-static-top">
+		<div class="container">
+			<a href="#" class="navbar-brand">Tech Site</a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".collapsibleNav">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="collapse navbar-collapse collapsibleNav">
+				<ul id="topnav" class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#home">Home</a></li>
+					<li><a href="#read">Blog</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Social Media <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Google +</a></li>
+							<li><a href="#">Instagram</a></li>
+						</ul>
+					</li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#contact" >Contact</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<!-- End Nav -->
+
+	<div ng-view></div>
+
+
+	<!-- Begin footer -->
+	<div class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			<p class="navbar-text pull-left">Site built by Manju</p>
+			<a href="http://youtube.com" class="navbar-btn btn-danger btn pull-right">Subscribe on YouTube</a>
+		 </div>
+	</div>
+	<!-- End footer -->
+    
+    
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contact" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal">
+                    <div class="modal-header">
+                        <p>Contact Tech Site</p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="contact-name" class="col-lg-2 control-label">Name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="contact-name" placeholder="Full Name"/>
+                            </div>
+                        
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" id="contact-email" placeholder="you@example.com"/>
+                            </div>
+                        
+                        </div>
+                       <div class="form-group">
+                            <label for="contact-message" class="col-lg-2 control-label">Message</label>
+                            <div class="col-lg-10">
+                                <textarea id="contact-message" class="form-control" rows="8"></textarea>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                        <button class="btn btn-primary" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+         
+    <script src="js/app.js"></script>
+</body>
+</html>
